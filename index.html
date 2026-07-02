@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0D0F1A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Artisan Express">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzFhMWEyZSIvPjx0ZXh0IHg9IjI1NiIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2siIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iOTAiIGZpbGw9IiNFOEE4MzgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFFTDwvdGV4dD48dGV4dCB4PSIyNTYiIHk9IjI5MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjQ2IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QVJUSVNBTjwvdGV4dD48dGV4dCB4PSIyNTYiIHk9IjM1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjQ2IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RVhQUkVTUzwvdGV4dD48dGV4dCB4PSIyNTYiIHk9IjQyMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjM4IiBmaWxsPSIjRThBODM4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MT03DiTwvdGV4dD48L3N2Zz4=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzFhMWEyZSIvPjx0ZXh0IHg9IjI1NiIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2siIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iOTAiIGZpbGw9IiNFOEE4MzgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFFTDwvdGV4dD48dGV4dCB4PSIyNTYiIHk9IjI5MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjQ2IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QVJUSVNBTjwvdGV4dD48dGV4dCB4PSIyNTYiIHk9IjM1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjQ2IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RVhQUkVTUzwvdGV4dD48dGV4dCB4PSIyNTYiIHk9IjQyMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjM4IiBmaWxsPSIjRThBODM4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MT03DiTwvdGV4dD48L3N2Zz4=">
+<meta name="google-site-verification" content="bj1pUGGzUaUXpNvAHIRbTXGmuCDN7bwGIJ_D_GKjVZM" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Artisan Express">
+<title>Artisan Express – Lomé</title>
+<script>
+// Manifest PWA inline
+const manifestData = {
+  name: "Artisan Express",
+  short_name: "Artisan Express",
+  description: "Trouvez un artisan près de vous à Lomé",
+  start_url: "/",
+  display: "standalone",
+  background_color: "#0D0F1A",
+  theme_color: "#F5A623",
+  orientation: "portrait",
+  icons: [{
+    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%230D0F1A'/%3E%3Ctext y='140' x='96' text-anchor='middle' font-size='120'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E",
+    sizes: "192x192",
+    type: "image/svg+xml"
+  }]
+};
+const blob = new Blob([JSON.stringify(manifestData)], {type: 'application/json'});
+const manifestUrl = URL.createObjectURL(blob);
+const link = document.createElement('link');
+link.rel = 'manifest';
+link.href = manifestUrl;
+document.head.appendChild(link);
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+/* ═══════════════════════════════════════
+   RESET & TOKENS
+═══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+:root {
+  --night:   #0D0F1A;
+  --deep:    #151829;
+  --surface: #1E2236;
+  --card:    #252A42;
+  --border:  #2E3458;
+  --amber:   #F5A623;
+  --amber2:  #C47D10;
+  --green:   #2ED573;
+  --red:     #FF4D4D;
+  --purple:  #a855f7;
+  --muted:   #8B90A8;
+  --light:   #D8DCF0;
+  --white:   #FFFFFF;
+  --radius:  16px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--night);
+  color: var(--light);
+  font-size: 15px;
+  line-height: 1.5;
+}
+h1,h2,h3,h4 { font-family: 'Syne', sans-serif; line-height: 1.2; }
+button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+input, select, textarea { font-family: inherit; outline: none; border: none; background: none; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* ═══════════════════════════════════════
+   APP SHELL
+═══════════════════════════════════════ */
+#app {
+  width: 100%; height: 100vh;
+  display: flex; flex-direction: column;
+  overflow: hidden; position: relative;
+}
+
+/* SCREENS */
+.screen {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s ease;
+  overflow: hidden;
+}
+.screen.active { opacity: 1; pointer-events: all; }
+
+.screen-body {
+  flex: 1; overflow-y: auto; overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: calc(72px + var(--safe-bottom));
+}
+.screen-body::-webkit-scrollbar { display: none; }
+
+/* BOTTOM NAV */
+#bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  display: flex;
+  padding-bottom: var(--safe-bottom);
+  z-index: 100;
+}
+.nav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 10px 0 8px; gap: 3px;
+  background: none; border: none;
+  color: var(--muted); font-size: 10px;
+  letter-spacing: .5px; text-transform: uppercase;
+  transition: color .2s;
+}
+.nav-item .nav-icon { font-size: 20px; line-height: 1; }
+.nav-item.active { color: var(--amber); }
+
+/* TOAST */
+#toast {
+  position: fixed; bottom: calc(80px + var(--safe-bottom));
+  left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--card); color: var(--white);
+  padding: 10px 20px; border-radius: 40px;
+  font-size: 13px; font-weight: 500;
+  box-shadow: 0 8px 32px rgba(0,0,0,.5);
+  opacity: 0; transition: all .3s ease;
+  white-space: nowrap; z-index: 999;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* LOADER */
+#loader {
+  position: fixed; inset: 0; background: var(--night);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; z-index: 9999;
+  transition: opacity .4s ease;
+}
+#loader.hidden { opacity: 0; pointer-events: none; }
+.loader-logo { font-size: 48px; }
+.loader-name { font-family: 'Syne', sans-serif; font-size: 24px; color: var(--white); }
+.loader-sub { font-size: 12px; color: var(--muted); }
+.spinner {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 3px solid var(--border);
+  border-top-color: var(--amber);
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ═══════════════════════════════════════
+   SHARED COMPONENTS
+═══════════════════════════════════════ */
+.top-bar {
+  padding: 52px 20px 16px;
+  background: var(--deep);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+}
+.top-bar h2 { font-size: 20px; color: var(--white); flex: 1; }
+.back-btn {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--light);
+  flex-shrink: 0;
+}
+
+.field-wrap { margin-bottom: 14px; }
+.field-label {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); display: block; margin-bottom: 6px;
+}
+.field-input {
+  width: 100%; background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 12px 14px;
+  font-size: 14px; color: var(--white);
+  transition: border-color .2s;
+}
+.field-input:focus { border-color: var(--amber); }
+.field-input.err { border-color: var(--red); }
+select.field-input { appearance: none; cursor: pointer; }
+
+.btn-primary {
+  width: 100%; padding: 15px;
+  background: var(--amber); color: var(--night);
+  border-radius: 14px; font-family: 'Syne', sans-serif;
+  font-size: 15px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: opacity .2s, transform .1s;
+  border: none;
+}
+.btn-primary:active { transform: scale(.97); opacity: .9; }
+.btn-primary:disabled { opacity: .5; }
+
+.btn-secondary {
+  width: 100%; padding: 13px;
+  background: var(--surface); color: var(--light);
+  border-radius: 14px; font-size: 14px; font-weight: 500;
+  border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+
+.section-head {
+  padding: 20px 20px 10px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.section-head h3 { font-size: 13px; color: var(--white); }
+.section-head a { font-size: 12px; color: var(--amber); }
+
+.empty-state {
+  text-align: center; padding: 48px 24px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.empty-state .empty-icon { font-size: 48px; }
+.empty-state h3 { font-size: 17px; color: var(--white); }
+.empty-state p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* STATUS BADGES */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  border-radius: 20px; padding: 3px 10px;
+  font-size: 11px; font-weight: 600;
+}
+.badge-green { background: rgba(46,213,115,.12); color: var(--green); }
+.badge-red   { background: rgba(255,77,77,.12);  color: var(--red); }
+.badge-amber { background: rgba(245,166,35,.12); color: var(--amber); }
+.badge-purple{ background: rgba(168,85,247,.12); color: var(--purple); }
+
+/* ═══════════════════════════════════════
+   SCREEN: ACCUEIL (CLIENT)
+═══════════════════════════════════════ */
+.home-hero {
+  background: linear-gradient(160deg, #1a1f3e 0%, var(--night) 100%);
+  padding: 52px 20px 28px;
+}
+.home-location {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--muted); margin-bottom: 16px;
+}
+.home-headline { font-size: 26px; color: var(--white); margin-bottom: 6px; }
+.home-headline em { color: var(--amber); font-style: normal; }
+.home-sub { font-size: 13px; color: var(--muted); }
+
+.search-wrap { padding: 0 20px; margin-top: -14px; margin-bottom: 4px; }
+.search-box {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+.search-box input {
+  flex: 1; font-size: 14px; color: var(--white);
+  background: none;
+}
+.search-box input::placeholder { color: var(--muted); }
+
+.cats-scroll {
+  display: flex; gap: 8px; overflow-x: auto;
+  padding: 16px 20px 8px; scrollbar-width: none;
+}
+.cats-scroll::-webkit-scrollbar { display: none; }
+.cat-pill {
+  flex-shrink: 0; border-radius: 20px; padding: 8px 14px;
+  background: var(--surface); border: 1.5px solid var(--border);
+  font-size: 13px; font-weight: 500; color: var(--light);
+  display: flex; align-items: center; gap: 6px;
+  cursor: pointer; transition: all .2s;
+}
+.cat-pill.active {
+  background: var(--amber); color: var(--night);
+  border-color: var(--amber); font-weight: 700;
+}
+
+/* Artisan card */
+.artisan-list { padding: 0 20px; display: flex; flex-direction: column; gap: 12px; }
+.artisan-card {
+  background: var(--card); border-radius: var(--radius);
+  border: 1px solid var(--border); padding: 14px;
+  display: flex; align-items: center; gap: 12px;
+  cursor: pointer; transition: border-color .2s;
+}
+.artisan-card:active { border-color: var(--amber); }
+.art-avatar {
+  width: 50px; height: 50px; border-radius: 14px;
+  background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.art-info { flex: 1; min-width: 0; }
+.art-name { font-size: 15px; font-weight: 600; color: var(--white); }
+.art-job  { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.art-stars { font-size: 11px; color: var(--amber); margin-top: 3px; }
+.art-right { text-align: right; flex-shrink: 0; }
+.art-dist  { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.art-chevron { font-size: 18px; color: var(--muted); margin-top: 4px; }
+
+/* ═══════════════════════════════════════
+   SCREEN: DÉTAIL ARTISAN
+═══════════════════════════════════════ */
+.detail-hero {
+  background: linear-gradient(160deg, #1e1a0a 0%, var(--night) 100%);
+  padding: 52px 20px 24px;
+}
+.detail-back {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: rgba(255,255,255,.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 20px; cursor: pointer;
+}
+.detail-top { display: flex; gap: 16px; align-items: flex-start; }
+.detail-avatar {
+  width: 70px; height: 70px; border-radius: 18px;
+  background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; border: 2px solid var(--amber); flex-shrink: 0;
+}
+.detail-name { font-size: 22px; color: var(--white); }
+.detail-job  { font-size: 14px; color: var(--amber); font-weight: 600; margin: 4px 0 6px; }
+.detail-stars { font-size: 13px; color: var(--amber); }
+.detail-stars span { color: var(--muted); font-size: 11px; margin-left: 4px; }
+
+.chips-row {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 16px 20px;
+}
+.chip {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 6px 12px;
+  font-size: 12px; display: flex; align-items: center; gap: 5px;
+}
+.chip.green-chip { border-color: rgba(46,213,115,.3); color: var(--green); }
+
+.detail-section { padding: 0 20px 16px; }
+.detail-section-title {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px;
+}
+.detail-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+.tags-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 5px 10px; font-size: 12px;
+}
+
+.cta-fixed {
+  position: sticky; bottom: 0;
+  background: linear-gradient(to top, var(--night) 80%, transparent);
+  padding: 16px 20px calc(16px + var(--safe-bottom));
+  display: flex; gap: 10px;
+}
+.btn-call {
+  flex: 1; background: var(--amber); color: var(--night);
+  border-radius: 14px; padding: 14px;
+  font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-whatsapp {
+  width: 50px; height: 50px; border-radius: 14px;
+  background: #128C7E;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+
+/* ═══════════════════════════════════════
+   SCREEN: INSCRIPTION ARTISAN
+═══════════════════════════════════════ */
+.signup-hero {
+  background: linear-gradient(160deg, #0a1f12 0%, var(--night) 100%);
+  padding: 52px 20px 32px;
+}
+.signup-tag {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--green); margin-bottom: 10px;
+}
+.signup-title { font-size: 24px; color: var(--white); }
+
+.plan-chooser { padding: 0 20px; margin-bottom: 20px; }
+.plan-chooser-label {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 10px; display: block;
+}
+.plan-options { display: flex; gap: 8px; }
+.plan-opt {
+  flex: 1; border-radius: 12px; padding: 12px 8px; text-align: center;
+  background: var(--surface); border: 1.5px solid var(--border);
+  cursor: pointer; transition: all .2s;
+}
+.plan-opt.selected {
+  border-color: var(--green); background: rgba(46,213,115,.06);
+}
+.plan-opt-dur { font-size: 12px; color: var(--muted); }
+.plan-opt-price { font-family: 'Syne', sans-serif; font-size: 15px; color: var(--white); margin: 4px 0 2px; }
+.plan-opt-eco { font-size: 10px; color: var(--green); }
+
+.paiement-info {
+  margin: 0 20px 20px;
+  background: rgba(245,166,35,.06);
+  border: 1px solid rgba(245,166,35,.2);
+  border-radius: 12px; padding: 14px;
+}
+.paiement-info p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.paiement-info strong { color: var(--amber); }
+
+.form-wrap { padding: 0 20px 24px; }
+
+/* ═══════════════════════════════════════
+   SCREEN: ADMIN DASHBOARD
+═══════════════════════════════════════ */
+.admin-hero {
+  background: linear-gradient(160deg, #1a0a2e 0%, var(--night) 100%);
+  padding: 52px 20px 20px;
+}
+.admin-role { font-size: 10px; letter-spacing: 2px; color: var(--purple); text-transform: uppercase; }
+.admin-title { font-size: 22px; color: var(--white); margin-top: 4px; }
+
+.stats-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px; padding: 16px 20px;
+}
+.stat-card {
+  background: var(--card); border-radius: 14px;
+  border: 1px solid var(--border); padding: 14px;
+}
+.stat-val { font-family: 'Syne', sans-serif; font-size: 26px; color: var(--white); }
+.stat-lbl { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* Pending cards */
+.pending-list { padding: 0 20px; display: flex; flex-direction: column; gap: 10px; }
+.pending-card {
+  background: var(--card); border-radius: 14px;
+  border: 1px solid var(--border); padding: 14px;
+}
+.pending-top { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.pending-avatar {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.pending-name { font-size: 15px; font-weight: 600; color: var(--white); }
+.pending-meta { font-size: 12px; color: var(--muted); }
+.pending-ref {
+  font-size: 11px; color: var(--amber);
+  background: rgba(245,166,35,.08); border-radius: 8px;
+  padding: 5px 10px; margin-bottom: 12px;
+  word-break: break-all;
+}
+.pending-btns { display: flex; gap: 8px; }
+.btn-approve {
+  flex: 1; background: rgba(46,213,115,.12); color: var(--green);
+  border: 1px solid rgba(46,213,115,.3);
+  border-radius: 10px; padding: 10px;
+  font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.btn-reject {
+  flex: 1; background: rgba(255,77,77,.08); color: var(--red);
+  border: 1px solid rgba(255,77,77,.2);
+  border-radius: 10px; padding: 10px;
+  font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+
+/* Admin artisan list */
+.admin-art-card {
+  background: var(--card); border-radius: 14px;
+  border: 1px solid var(--border); padding: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.admin-art-info { flex: 1; min-width: 0; }
+.admin-art-name { font-size: 14px; font-weight: 600; color: var(--white); }
+.admin-art-meta { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.toggle-btn {
+  width: 44px; height: 24px; border-radius: 12px;
+  background: var(--surface); border: 1.5px solid var(--border);
+  position: relative; cursor: pointer; transition: background .2s;
+  flex-shrink: 0;
+}
+.toggle-btn.on { background: var(--green); border-color: var(--green); }
+.toggle-knob {
+  position: absolute; top: 2px; left: 2px;
+  width: 16px; height: 16px; border-radius: 8px;
+  background: var(--muted); transition: all .2s;
+}
+.toggle-btn.on .toggle-knob { left: 22px; background: var(--night); }
+
+/* Tab switcher */
+.tab-bar {
+  display: flex; padding: 12px 20px 0;
+  gap: 4px; border-bottom: 1px solid var(--border);
+}
+.tab-btn {
+  flex: 1; padding: 10px 0;
+  font-size: 13px; font-weight: 500;
+  color: var(--muted); background: none;
+  border-bottom: 2px solid transparent;
+  transition: all .2s;
+}
+.tab-btn.active { color: var(--amber); border-bottom-color: var(--amber); }
+.btn-delete-art {
+  background: rgba(255,77,77,.1); color: var(--red);
+  border: 1px solid rgba(255,77,77,.2);
+  border-radius: 8px; padding: 4px 8px;
+  font-size: 13px; cursor: pointer;
+}
+.settings-section {
+  padding: 16px 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.settings-card {
+  background: var(--card); border-radius: 14px;
+  border: 1px solid var(--border); padding: 16px;
+}
+.settings-card-title {
+  font-size: 13px; font-weight: 600; color: var(--white);
+  margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ═══════════════════════════════════════
+   MODAL
+═══════════════════════════════════════ */
+.pm-info-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px;
+}
+.pm-info-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.pm-info-label {
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 3px;
+}
+.pm-info-val { font-size: 14px; color: var(--white); font-weight: 500; }
+
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.7);
+  display: flex; align-items: flex-end; justify-content: center;
+  z-index: 500; opacity: 0; pointer-events: none;
+  transition: opacity .3s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-sheet {
+  background: var(--deep); border-radius: 24px 24px 0 0;
+  padding: 20px 20px calc(20px + var(--safe-bottom));
+  width: 100%; max-width: 480px;
+  transform: translateY(40px);
+  transition: transform .3s ease;
+  max-height: 90vh; overflow-y: auto;
+}
+.modal-overlay.open .modal-sheet { transform: translateY(0); }
+.modal-handle {
+  width: 40px; height: 4px; border-radius: 4px;
+  background: var(--border); margin: 0 auto 20px;
+}
+.modal-title { font-size: 18px; color: var(--white); margin-bottom: 16px; }
+
+/* ═══════════════════════════════════════
+   PHOTO PROFIL
+═══════════════════════════════════════ */
+.photo-upload-wrap {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 12px;
+  margin-bottom: 4px;
+}
+.photo-preview {
+  width: 90px; height: 90px; border-radius: 50%;
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px; overflow: hidden;
+  position: relative; cursor: pointer;
+  transition: border-color .2s;
+}
+.photo-preview:active { border-color: var(--amber); }
+.photo-preview img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 50%;
+}
+.photo-preview .photo-overlay {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: rgba(0,0,0,.45);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity .2s;
+  font-size: 22px;
+}
+.photo-preview:hover .photo-overlay { opacity: 1; }
+.photo-btns { display: flex; gap: 8px; }
+.photo-btn {
+  padding: 8px 14px; border-radius: 10px;
+  font-size: 12px; font-weight: 600;
+  border: 1.5px solid var(--border);
+  background: var(--surface); color: var(--light);
+  cursor: pointer; display: flex; align-items: center; gap: 5px;
+}
+.photo-btn.primary-photo {
+  border-color: var(--amber);
+  color: var(--amber);
+  background: rgba(245,166,35,.08);
+}
+.photo-hint {
+  font-size: 11px; color: var(--muted);
+  text-align: center; font-style: italic;
+}
+/* Avatar dans les cartes */
+.art-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 14px;
+}
+.detail-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 16px;
+}
+.pending-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 12px;
+}
+
+/* ═══════════════════════════════════════
+   FOOTER CONTACT
+═══════════════════════════════════════ */
+.footer-contact {
+  margin: 24px 20px 8px;
+  background: var(--deep);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.footer-contact-title {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.footer-contact-btns { display: flex; flex-direction: column; gap: 10px; }
+.footer-btn-wa {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: #128C7E; color: var(--white);
+  border-radius: 14px; padding: 13px 16px;
+  font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; width: 100%;
+  transition: opacity .2s;
+}
+.footer-btn-wa:active { opacity: .85; }
+.footer-btn-mail {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: rgba(168,85,247,.1); color: var(--purple);
+  border: 1.5px solid rgba(168,85,247,.3);
+  border-radius: 14px; padding: 13px 16px;
+  font-size: 14px; font-weight: 600;
+  cursor: pointer; width: 100%;
+  transition: opacity .2s;
+}
+.footer-signature {
+  display: flex; justify-content: center;
+  padding: 8px 0 20px;
+}
+.sig-circle {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #F5A623;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px; font-weight: 800;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(245,166,35,.4);
+}
+.footer-brand {
+  margin: 16px 20px 0;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding-bottom: 8px;
+}
+.footer-brand-logo {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--amber);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-family: 'Syne', sans-serif;
+  font-weight: 800; color: var(--night);
+}
+.footer-brand-info { text-align: left; }
+.footer-brand-name { font-family: 'Syne', sans-serif; font-size: 14px; color: var(--white); }
+.footer-brand-year { font-size: 11px; color: var(--muted); }
+
+.toggle-mode-row {
+  display: flex; gap: 8px; margin-bottom: 8px;
+}
+.mode-btn {
+  flex: 1; padding: 8px 0;
+  border-radius: 10px; font-size: 12px; font-weight: 600;
+  background: var(--surface); color: var(--muted);
+  border: 1.5px solid var(--border);
+  cursor: pointer; transition: all .2s;
+}
+.mode-btn.active {
+  background: rgba(245,166,35,.12);
+  color: var(--amber);
+  border-color: var(--amber);
+}
+.field-hint {
+  font-size: 11px; color: var(--muted);
+  display: block; margin-top: 5px; padding-left: 2px;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════
+   CONFIG SCREEN
+═══════════════════════════════════════ */
+.config-screen {
+  position: fixed; inset: 0; background: var(--night);
+  z-index: 1000; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 32px 24px; gap: 20px;
+  transition: opacity .3s;
+}
+.config-screen.hidden { opacity: 0; pointer-events: none; }
+.config-logo { font-size: 56px; }
+.config-title { font-family: 'Syne', sans-serif; font-size: 26px; color: var(--white); text-align: center; }
+.config-sub { font-size: 13px; color: var(--muted); text-align: center; line-height: 1.6; }
+.config-form { width: 100%; max-width: 360px; display: flex; flex-direction: column; gap: 12px; }
+</style>
+</head>
+<body>
+
+<!-- ── LOADER ── -->
+<div id="loader">
+  <div class="loader-logo">⚡</div>
+  <div class="loader-name">Artisan Express</div>
+  <div class="loader-sub">Lomé, Togo</div>
+  <div class="spinner"></div>
+</div>
+
+<!-- ── CONFIG (first-time setup) ── -->
+<div class="config-screen hidden" id="config-screen">
+  <div class="config-logo">⚡</div>
+  <h1 class="config-title">Artisan Express</h1>
+  <p class="config-sub">Entrez vos clés Supabase pour connecter l'application à votre base de données.</p>
+  <div class="config-form">
+    <div class="field-wrap">
+      <label class="field-label">Supabase URL</label>
+      <input class="field-input" id="cfg-url" type="text" placeholder="https://xxxx.supabase.co">
+    </div>
+    <div class="field-wrap">
+      <label class="field-label">Supabase Anon Key</label>
+      <input class="field-input" id="cfg-key" type="text" placeholder="eyJhbGci...">
+    </div>
+    <div class="field-wrap">
+      <label class="field-label">Mot de passe Admin</label>
+      <input class="field-input" id="cfg-pass" type="password" placeholder="Choisissez un mot de passe">
+    </div>
+    <button class="btn-primary" onclick="saveConfig()">⚡ Lancer l'application</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     APP SHELL
+═══════════════════════════════════════════ -->
+<div id="app" style="display:none">
+
+  <!-- ╔═══════════════════════════════╗
+       ║  SCREEN: ACCUEIL CLIENT       ║
+       ╚═══════════════════════════════╝ -->
+  <div class="screen active" id="screen-home">
+    <div class="screen-body">
+      <div class="home-hero">
+        <div class="home-location">📍 Lomé, Togo</div>
+        <h1 class="home-headline">Besoin d'un<br><em>artisan maintenant ?</em></h1>
+        <p class="home-sub">Trouvez un professionnel proche de vous</p>
+      </div>
+
+      <div class="search-wrap">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="search-input" placeholder="Rechercher un métier ou un nom…" oninput="filterArtisans()">
+        </div>
+      </div>
+
+      <div class="cats-scroll" id="cats-scroll">
+        <div class="cat-pill active" data-cat="all" onclick="selectCat(this, 'all')">✨ Tous</div>
+      </div>
+
+      <div class="section-head">
+        <h3>Artisans disponibles</h3>
+        <span id="artisan-count" style="font-size:12px;color:var(--muted)"></span>
+      </div>
+
+      <div class="artisan-list" id="artisan-list">
+        <div class="empty-state">
+          <div class="empty-icon">⚡</div>
+          <h3>Chargement…</h3>
+        </div>
+      </div>
+
+      <!-- SÉPARATEUR -->
+      <div style="height:40px"></div>
+      <div style="height:1px;background:var(--border);margin:0 32px"></div>
+
+      <!-- FOOTER COMPACT -->
+      <div style="
+        padding: 24px 20px 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+      ">
+
+        <!-- Titre -->
+        <p style="
+          font-size: 10px;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: var(--muted);
+          font-weight: 600;
+          margin: 0;
+        ">Nous contacter</p>
+
+        <!-- WhatsApp -->
+        <div onclick="window.open('https://wa.me/22892004908?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20Artisan%20Express.')"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+          ">
+          <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="24" fill="#25D366"/>
+            <path d="M34.5 13.5C32.1 11.1 28.9 9.75 25.5 9.75C18.45 9.75 12.75 15.45 12.75 22.5C12.75 24.75 13.35 26.85 14.4 28.65L12.75 35.25L19.5 33.6C21.3 34.5 23.25 35.1 25.35 35.1C32.4 35.1 38.1 29.4 38.1 22.35C38.25 18.9 36.9 15.9 34.5 13.5ZM25.5 33C23.55 33 21.75 32.4 20.1 31.5L19.8 31.35L15.9 32.4L16.95 28.5L16.65 28.2C15.6 26.55 15 24.6 15 22.5C15 16.65 19.65 12 25.5 12C28.35 12 31.05 13.05 33 15C34.95 16.95 36 19.65 36 22.5C36 28.35 31.35 33 25.5 33ZM31.35 25.2C31.05 25.05 29.55 24.3 29.25 24.15C28.95 24 28.8 24 28.65 24.3C28.5 24.6 27.9 25.2 27.75 25.5C27.6 25.65 27.45 25.65 27.15 25.5C26.85 25.35 25.95 25.05 24.9 24.15C24.15 23.4 23.55 22.5 23.4 22.2C23.25 21.9 23.4 21.75 23.55 21.6C23.7 21.45 23.85 21.3 24 21.15C24.15 21 24.15 20.85 24.3 20.7C24.45 20.55 24.3 20.4 24.3 20.25C24.3 20.1 23.7 18.6 23.4 18C23.1 17.4 22.8 17.4 22.65 17.4H22.2C21.9 17.4 21.6 17.55 21.45 17.7C21.15 18 20.4 18.75 20.4 20.25C20.4 21.75 21.45 23.1 21.6 23.4C21.75 23.55 23.7 26.55 26.7 27.9C29.7 29.1 29.7 28.8 30.15 28.8C30.6 28.8 31.65 28.05 31.95 27.3C32.1 26.55 32.1 25.95 31.95 25.8C31.8 25.35 31.65 25.35 31.35 25.2Z" fill="white"/>
+          </svg>
+          <span style="font-size:15px;color:var(--white);font-weight:600;">92 00 49 08</span>
+        </div>
+
+        <!-- Email -->
+        <div onclick="window.location.href='mailto:aagoudah@gmail.com'"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+          ">
+          <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="24" fill="#4A90D9"/>
+            <path d="M10 16C10 14.9 10.9 14 12 14H36C37.1 14 38 14.9 38 16V32C38 33.1 37.1 34 36 34H12C10.9 34 10 33.1 10 32V16Z" fill="white" opacity="0.2"/>
+            <path d="M10 16L24 25L38 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="10" y="14" width="28" height="20" rx="2" stroke="white" stroke-width="2"/>
+          </svg>
+          <span style="font-size:14px;color:var(--light);">aagoudah@gmail.com</span>
+        </div>
+
+        <!-- Séparateur léger -->
+        <div style="height:1px;width:60px;background:var(--border)"></div>
+
+        <!-- Logo + Nom -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px">
+          <span style="font-size:20px">⚡</span>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:14px;color:var(--white);text-align:left">Artisan Express</div>
+            <div style="font-size:11px;color:var(--muted);text-align:left">© 2026 · Lomé, Togo</div>
+          </div>
+        </div>
+
+        <!-- Signature Ag+ -->
+        <div class="sig-circle">Ag+</div>
+
+      </div>
+
+    </div><!-- /screen-body -->
+  </div><!-- /screen-home -->
+
+  <!-- ╔═══════════════════════════════╗
+       ║  SCREEN: DÉTAIL ARTISAN       ║
+       ╚═══════════════════════════════╝ -->
+  <div class="screen" id="screen-detail">
+    <div class="screen-body">
+      <div class="detail-hero">
+        <div class="detail-back" onclick="goBack()">←</div>
+        <div class="detail-top">
+          <div class="detail-avatar" id="det-avatar">🔧</div>
+          <div>
+            <h2 class="detail-name" id="det-name">—</h2>
+            <div class="detail-job" id="det-job">—</div>
+            <div class="detail-stars" id="det-stars">★★★★★ <span>Nouveau</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chips-row" id="det-chips"></div>
+
+      <div class="detail-section">
+        <div class="detail-section-title">À propos</div>
+        <p class="detail-desc" id="det-desc">—</p>
+      </div>
+
+      <div class="detail-section" id="det-zones-wrap">
+        <div class="detail-section-title">Zones d'intervention</div>
+        <div class="tags-row" id="det-zones"></div>
+      </div>
+
+      <div class="detail-section" id="det-services-wrap" style="padding-bottom:80px">
+        <div class="detail-section-title">Services</div>
+        <div class="tags-row" id="det-services"></div>
+      </div>
+
+      <div class="cta-fixed">
+        <button class="btn-call" id="det-call-btn">📞 Appeler</button>
+        <button class="btn-whatsapp" id="det-wa-btn">💬</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔═══════════════════════════════╗
+       ║  SCREEN: INSCRIPTION ARTISAN  ║
+       ╚═══════════════════════════════╝ -->
+  <div class="screen" id="screen-signup">
+    <div class="screen-body">
+      <div class="signup-hero">
+        <div class="signup-tag">⚡ Pour les artisans</div>
+        <h1 class="signup-title">Rejoignez<br>Artisan Express</h1>
+      </div>
+
+      <!-- Plans -->
+      <div class="plan-chooser">
+        <span class="plan-chooser-label">Choisissez votre abonnement</span>
+        <div class="plan-options">
+          <div class="plan-opt selected" data-plan="mensuel" data-price="2000" onclick="selectPlan(this)">
+            <div class="plan-opt-dur">1 mois</div>
+            <div class="plan-opt-price">2 000</div>
+            <div style="font-size:9px;color:var(--muted)">FCFA</div>
+          </div>
+          <div class="plan-opt" data-plan="trimestriel" data-price="5000" onclick="selectPlan(this)">
+            <div class="plan-opt-dur">3 mois</div>
+            <div class="plan-opt-price">5 000</div>
+            <div class="plan-opt-eco">-17%</div>
+          </div>
+          <div class="plan-opt" data-plan="annuel" data-price="18000" onclick="selectPlan(this)">
+            <div class="plan-opt-dur">12 mois</div>
+            <div class="plan-opt-price">18 000</div>
+            <div class="plan-opt-eco">-25%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infos paiement -->
+      <div class="paiement-info">
+        <p>Envoyez votre abonnement via :<br>
+        <strong>📱 Mix by Yas : +228 92 00 49 08</strong><br>
+        <strong>📱 Flooz : +228 96 88 41 65</strong><br><br>
+        Copiez la <strong>référence de transaction</strong> et collez-la dans le formulaire ci-dessous.</p>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="form-wrap">
+        <!-- PHOTO DE PROFIL -->
+        <div class="field-wrap">
+          <label class="field-label">Photo de profil <span style="color:var(--amber)">*</span></label>
+          <div class="photo-upload-wrap">
+            <div class="photo-preview" id="photo-preview" onclick="document.getElementById('photo-input').click()">
+              <span id="photo-placeholder">🧑</span>
+              <div class="photo-overlay">📷</div>
+            </div>
+            <div class="photo-btns">
+              <button type="button" class="photo-btn primary-photo" onclick="document.getElementById('photo-input').click()">
+                📷 Prendre une photo
+              </button>
+              <button type="button" class="photo-btn" onclick="triggerGallery()">
+                🖼️ Galerie
+              </button>
+            </div>
+            <p class="photo-hint">Votre visage doit être visible — inspire confiance aux clients</p>
+          </div>
+          <input type="file" id="photo-input" accept="image/*" capture="user"
+            style="display:none" onchange="previewPhoto(this)">
+          <input type="file" id="gallery-input" accept="image/*"
+            style="display:none" onchange="previewPhoto(this)">
+        </div>
+
+        <div class="field-wrap">
+          <label class="field-label">Nom complet</label>
+          <input class="field-input" id="f-nom" type="text" placeholder="Ex: Kofi Mensah">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Numéro de téléphone</label>
+          <input class="field-input" id="f-tel" type="tel" placeholder="+228 90 00 00 00">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Catégorie de métier</label>
+          <select class="field-input" id="f-cat-select" onchange="onCatChange()">
+            <option value="">— Sélectionner —</option>
+          </select>
+          <div id="cat-free-wrap" style="display:none; margin-top:8px">
+            <input class="field-input" id="f-cat-free" type="text"
+              placeholder="Écrivez votre métier ici…"
+              autofocus>
+          </div>
+          <input type="hidden" id="f-cat">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Décrivez votre métier</label>
+          <input class="field-input" id="f-metier" type="text" placeholder="Ex: Mécanicien auto, 8 ans d'expérience">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Zone de travail à Lomé</label>
+          <select class="field-input" id="f-zone-select" onchange="onZoneChange()">
+            <option value="">— Sélectionner votre zone —</option>
+            <option>Bè-Kpota</option><option>Adidogomé</option><option>Kodjoviakopé</option>
+            <option>Baguida</option><option>Agoè</option><option>Hédzranawoé</option>
+            <option>Tokoin</option><option>Amoutivé</option><option>Nyékonakpoè</option>
+            <option>Légos</option><option>Défalé</option><option>Ablogamé</option>
+            <option>Kégué</option><option>Cacavéli</option><option>Université</option>
+            <option>Gbényédji</option><option>Hanoukopé</option><option>Zanguéra</option>
+            <option>Djidjolé</option><option>Wuiti</option>
+            <option value="__autre__">✏️ Ajouter un quartier</option>
+          </select>
+          <div id="zone-free-wrap" style="display:none; margin-top:8px">
+            <input class="field-input" id="f-zone-free" type="text"
+              placeholder="Écrivez votre quartier ici…">
+          </div>
+          <input type="hidden" id="f-zone">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Description (optionnel)</label>
+          <input class="field-input" id="f-desc" type="text" placeholder="Disponible 24h/24, intervention rapide…">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Référence de paiement TMoney/Flooz</label>
+          <input class="field-input" id="f-ref" type="text" placeholder="Ex: TM20240615001234">
+        </div>
+
+        <button class="btn-primary" id="signup-btn" onclick="submitSignup()">
+          ✅ Soumettre ma candidature
+        </button>
+        <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:12px">
+          Votre profil sera activé après vérification du paiement par l'admin (sous 24h).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔═══════════════════════════════╗
+       ║  SCREEN: ADMIN                ║
+       ╚═══════════════════════════════╝ -->
+  <div class="screen" id="screen-admin">
+    <div class="screen-body">
+      <div class="admin-hero">
+        <div class="admin-role">👑 Admin</div>
+        <h1 class="admin-title">Tableau de bord</h1>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-val" id="stat-actifs" style="color:var(--green)">—</div>
+          <div class="stat-lbl">Artisans actifs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="stat-revenus" style="color:var(--amber)">—</div>
+          <div class="stat-lbl">FCFA encaissés</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="stat-attente" style="color:var(--purple)">—</div>
+          <div class="stat-lbl">En attente</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="stat-total" style="color:var(--white)">—</div>
+          <div class="stat-lbl">Total inscrits</div>
+        </div>
+      </div>
+
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab(this,'tab-pending')">En attente</button>
+        <button class="tab-btn" onclick="switchTab(this,'tab-artisans')">Artisans</button>
+        <button class="tab-btn" onclick="switchTab(this,'tab-settings')">⚙️</button>
+      </div>
+
+      <div id="tab-pending" class="tab-panel active" style="padding-top:16px">
+        <div class="pending-list" id="pending-list">
+          <div class="empty-state">
+            <div class="empty-icon">✅</div>
+            <h3>Aucune demande</h3>
+            <p>Toutes les inscriptions ont été traitées.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-artisans" class="tab-panel" style="padding:16px 20px;display:flex;flex-direction:column;gap:10px">
+        <div id="admin-art-list">
+          <div class="empty-state">
+            <div class="empty-icon">🔧</div>
+            <h3>Aucun artisan</h3>
+            <p>Les artisans validés apparaîtront ici.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-settings" class="tab-panel">
+        <div class="settings-section">
+
+          <!-- CHANGER MOT DE PASSE -->
+          <div class="settings-card">
+            <div class="settings-card-title">🔐 Changer le mot de passe Admin</div>
+            <div class="field-wrap">
+              <label class="field-label">Mot de passe actuel</label>
+              <input class="field-input" id="pass-actuel" type="password" placeholder="Mot de passe actuel">
+            </div>
+            <div class="field-wrap">
+              <label class="field-label">Nouveau mot de passe</label>
+              <input class="field-input" id="pass-nouveau" type="password" placeholder="Nouveau mot de passe">
+            </div>
+            <div class="field-wrap">
+              <label class="field-label">Confirmer le nouveau mot de passe</label>
+              <input class="field-input" id="pass-confirm" type="password" placeholder="Répétez le nouveau mot de passe">
+            </div>
+            <button class="btn-primary" onclick="changePassword()">🔐 Changer le mot de passe</button>
+          </div>
+
+          <!-- INFO APP -->
+          <div class="settings-card">
+            <div class="settings-card-title">⚡ Artisan Express</div>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7">
+              Version 1.0 · Lomé, Togo<br>
+              Développé avec ❤️ par <strong style="color:var(--amber)">Ag+</strong><br>
+              © 2026 · Tous droits réservés
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav id="bottom-nav">
+    <button class="nav-item active" onclick="navigate('home',this)">
+      <span class="nav-icon">🏠</span>Accueil
+    </button>
+    <button class="nav-item" onclick="navigate('signup',this)">
+      <span class="nav-icon">🔧</span>S'inscrire
+    </button>
+    <button class="nav-item" onclick="openAdminModal()">
+      <span class="nav-icon">👑</span>Admin
+    </button>
+  </nav>
+
+</div><!-- /app -->
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- MODAL PROFIL CANDIDAT -->
+<div class="modal-overlay" id="profil-modal">
+  <div class="modal-sheet" style="max-height:92vh;overflow-y:auto">
+    <div class="modal-handle"></div>
+
+    <!-- Photo + Nom -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:20px">
+      <div id="pm-avatar" style="
+        width:90px;height:90px;border-radius:50%;
+        background:var(--surface);border:3px solid var(--amber);
+        display:flex;align-items:center;justify-content:center;
+        font-size:40px;overflow:hidden;flex-shrink:0;
+      "></div>
+      <div style="text-align:center">
+        <h3 id="pm-nom" style="font-size:20px;color:var(--white);margin-bottom:4px"></h3>
+        <div id="pm-metier" style="font-size:14px;color:var(--amber);font-weight:600"></div>
+      </div>
+      <div id="pm-statut-badge"></div>
+    </div>
+
+    <!-- Infos -->
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
+
+      <div class="pm-info-row">
+        <span class="pm-info-icon">📞</span>
+        <div>
+          <div class="pm-info-label">Téléphone</div>
+          <div class="pm-info-val" id="pm-tel"></div>
+        </div>
+      </div>
+
+      <div class="pm-info-row">
+        <span class="pm-info-icon">📍</span>
+        <div>
+          <div class="pm-info-label">Zone de travail</div>
+          <div class="pm-info-val" id="pm-zone"></div>
+        </div>
+      </div>
+
+      <div class="pm-info-row">
+        <span class="pm-info-icon">🗂️</span>
+        <div>
+          <div class="pm-info-label">Catégorie</div>
+          <div class="pm-info-val" id="pm-cat"></div>
+        </div>
+      </div>
+
+      <div class="pm-info-row" id="pm-desc-wrap">
+        <span class="pm-info-icon">📝</span>
+        <div>
+          <div class="pm-info-label">Description</div>
+          <div class="pm-info-val" id="pm-desc"></div>
+        </div>
+      </div>
+
+      <div class="pm-info-row" style="background:rgba(245,166,35,.06);border-color:rgba(245,166,35,.2)">
+        <span class="pm-info-icon">💰</span>
+        <div>
+          <div class="pm-info-label">Abonnement</div>
+          <div class="pm-info-val" id="pm-abo"></div>
+        </div>
+      </div>
+
+      <div class="pm-info-row" style="background:rgba(245,166,35,.06);border-color:rgba(245,166,35,.2)">
+        <span class="pm-info-icon">🧾</span>
+        <div>
+          <div class="pm-info-label">Référence paiement</div>
+          <div class="pm-info-val" id="pm-ref" style="word-break:break-all"></div>
+        </div>
+      </div>
+
+      <div class="pm-info-row">
+        <span class="pm-info-icon">📅</span>
+        <div>
+          <div class="pm-info-label">Date d'inscription</div>
+          <div class="pm-info-val" id="pm-date"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Boutons action -->
+    <div id="pm-actions" style="display:flex;gap:10px;margin-bottom:12px"></div>
+    <button class="btn-secondary" onclick="closeModal('profil-modal')">Fermer</button>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div class="modal-overlay" id="admin-modal">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <h3 class="modal-title">🔐 Accès Admin</h3>
+    <div class="field-wrap">
+      <label class="field-label">Mot de passe</label>
+      <input class="field-input" id="admin-pass-input" type="password"
+             placeholder="Votre mot de passe admin"
+             onkeydown="if(event.key==='Enter')checkAdmin()">
+    </div>
+    <button class="btn-primary" onclick="checkAdmin()">Entrer</button>
+    <button class="btn-secondary" style="margin-top:10px" onclick="closeModal('admin-modal')">Annuler</button>
+  </div>
+</div>
+
+<script>
+/* ════════════════════════════════════════
+   CONFIG & SUPABASE INIT
+════════════════════════════════════════ */
+const CATS = [
+  { slug:'mecanique',  nom:'Mécanicien',    icon:'🚗' },
+  { slug:'electricite',nom:'Électricien',   icon:'🔌' },
+  { slug:'plomberie',  nom:'Plombier',      icon:'🔧' },
+  { slug:'telephone',  nom:'Téléphone',     icon:'📱' },
+  { slug:'menuiserie', nom:'Menuisier',     icon:'🪵' },
+  { slug:'maconnerie', nom:'Maçon',         icon:'🏗️' },
+  { slug:'soudure',    nom:'Soudeur',       icon:'⚙️' },
+  { slug:'serrurerie', nom:'Serrurier',     icon:'🔑' },
+  { slug:'informatique',nom:'Informaticien',icon:'💻' },
+  { slug:'couture',    nom:'Couturier',     icon:'🧵' },
+];
+
+const PLANS = { mensuel:{dur:30}, trimestriel:{dur:90}, annuel:{dur:365} };
+
+let sb = null;
+let currentCat = 'all';
+let allArtisans = [];
+let currentArtisan = null;
+let selectedPlan = { plan:'mensuel', price:2000 };
+let previousScreen = 'home';
+
+// ═══════════════════════════════════════
+// CONFIGURATION FIXE — NE PAS MODIFIER
+// ═══════════════════════════════════════
+const CONFIG = {
+  url:  'https://xpkceypdwfpqdgpvmxan.supabase.co',
+  key:  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhwa2NleXBkd2ZwcWRncHZteGFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0ODQzMTEsImV4cCI6MjA5ODA2MDMxMX0.AUMvC51SNBr8hOh8Ji7i4zKq81sIzC_FgFerylZYAdU',
+  pass: 'Ag+&369'
+};
+
+function loadConfig() { return CONFIG; }
+function saveConfig() {}
+
+async function initApp() {
+  // Charger le mot de passe modifié s'il existe
+  const passOverride = localStorage.getItem('ae_pass_override');
+  if (passOverride) CONFIG.pass = passOverride;
+  try {
+    // Fetch direct - pas de SDK
+    sb = {
+      from: (table) => ({
+        _table: table, _filters: [], _cols: '*', _lim: null,
+        select(cols){ this._cols=cols||'*'; return this; },
+        eq(col,val){ this._filters.push(col+'=eq.'+encodeURIComponent(val)); return this; },
+        neq(col,val){ this._filters.push(col+'=neq.'+encodeURIComponent(val)); return this; },
+        order(col,{ascending}={}){ this._order=col+'.'+(ascending?'asc':'desc'); return this; },
+        limit(n){ this._lim=n; return this; },
+        single(){ this._single=true; return this; },
+        async _run(method='GET', body=null){
+          let url = CONFIG.url+'/rest/v1/'+this._table+'?select='+this._cols;
+          if(this._filters.length) url += '&'+this._filters.join('&');
+          if(this._order) url += '&order='+this._order;
+          if(this._lim) url += '&limit='+this._lim;
+          const opts = { method, headers: { 'apikey': CONFIG.key, 'Authorization': 'Bearer '+CONFIG.key, 'Content-Type': 'application/json', 'Prefer': method==='POST'?'return=representation':'' } };
+          if(body) opts.body = JSON.stringify(body);
+          try{
+            const r = await fetch(url, opts);
+            const txt = await r.text();
+            const data = txt ? JSON.parse(txt) : [];
+            if(!r.ok) return {data:null, error:{message:(data&&data.message)||'HTTP '+r.status}};
+            const result = this._single?(Array.isArray(data)?data[0]:data):data;
+            return {data:result||[], error:null};
+          }catch(e){ return {data:null, error:{message:e.message}}; }
+        },
+        then(resolve){ return this._run().then(resolve); },
+        async insert(body){ return this._post(body); },
+        async _post(body){
+          const r = await fetch(CONFIG.url+'/rest/v1/'+this._table, {method:'POST',headers:{'apikey':CONFIG.key,'Authorization':'Bearer '+CONFIG.key,'Content-Type':'application/json','Prefer':'return=representation'},body:JSON.stringify(body)});
+          const txt = await r.text(); const data = txt?JSON.parse(txt):null;
+          if(!r.ok) return {data:null, error:{message:(data&&data.message)||'HTTP '+r.status}};
+          return {data, error:null};
+        },
+        async update(body){
+          let url = CONFIG.url+'/rest/v1/'+this._table;
+          if(this._filters.length) url += '?'+this._filters.join('&');
+          const r = await fetch(url, {method:'PATCH',headers:{'apikey':CONFIG.key,'Authorization':'Bearer '+CONFIG.key,'Content-Type':'application/json','Prefer':'return=representation'},body:JSON.stringify(body)});
+          const txt = await r.text(); const data = txt?JSON.parse(txt):null;
+          if(!r.ok) return {data:null, error:{message:(data&&data.message)||'HTTP '+r.status}};
+          return {data, error:null};
+        },
+        async upsert(body){
+          const r = await fetch(CONFIG.url+'/rest/v1/'+this._table, {method:'POST',headers:{'apikey':CONFIG.key,'Authorization':'Bearer '+CONFIG.key,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=representation'},body:JSON.stringify(body)});
+          const txt = await r.text(); const data = txt?JSON.parse(txt):null;
+          if(!r.ok) return {data:null, error:{message:(data&&data.message)||'HTTP '+r.status}};
+          return {data, error:null};
+        },
+        async delete(){
+          let url = CONFIG.url+'/rest/v1/'+this._table;
+          if(this._filters.length) url += '?'+this._filters.join('&');
+          const r = await fetch(url, {method:'DELETE',headers:{'apikey':CONFIG.key,'Authorization':'Bearer '+CONFIG.key}});
+          return {data:null, error:r.ok?null:{message:'HTTP '+r.status}};
+        }
+      }),
+      storage: { from: (bucket) => ({
+        async upload(path, file){ 
+          const r = await fetch(CONFIG.url+'/storage/v1/object/'+bucket+'/'+path, {method:'POST',headers:{'apikey':CONFIG.key,'Authorization':'Bearer '+CONFIG.key},body:file});
+          return {data:r.ok?{path}:null, error:r.ok?null:{message:'Upload failed'}};
+        },
+        getPublicUrl(path){ return {data:{publicUrl:CONFIG.url+'/storage/v1/object/public/'+bucket+'/'+path}}; }
+      })}
+    };
+    await setupDB();
+    document.getElementById('app').style.display = 'flex';
+    document.getElementById('config-screen').classList.add('hidden');
+    buildCatPills();
+    populateCatSelect();
+    await loadArtisans();
+    document.getElementById('loader').classList.add('hidden');
+  } catch(e) {
+    toast('Erreur de connexion. Vérifiez votre connexion internet.');
+    document.getElementById('loader').classList.add('hidden');
+  }
+}
+
+/* ════════════════════════════════════════
+   SETUP DB (crée tables si besoin)
+════════════════════════════════════════ */
+async function setupDB() {
+  // On tente de lire la table — si elle n'existe pas, on doit la créer
+  // Note: l'utilisateur doit exécuter le SQL dans Supabase Studio
+  // On vérifie juste la connexion ici
+  const { error } = await sb.from('artisans').select('id').limit(1);
+  if (error && error.code === '42P01') {
+    // Table inexistante — afficher SQL setup
+    showSQLModal();
+    throw new Error('Tables inexistantes');
+  }
+}
+
+/* ════════════════════════════════════════
+   NAVIGATION
+════════════════════════════════════════ */
+function navigate(screen, navEl) {
+  previousScreen = document.querySelector('.screen.active')?.id?.replace('screen-','') || 'home';
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('screen-'+screen).classList.add('active');
+  if (navEl) navEl.classList.add('active');
+  if (screen === 'home') loadArtisans();
+  if (screen === 'admin') loadAdmin();
+}
+
+function goBack() {
+  navigate(previousScreen, document.querySelector('.nav-item.active'));
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+/* ════════════════════════════════════════
+   TOAST
+════════════════════════════════════════ */
+function toast(msg, dur=3000) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), dur);
+}
+
+/* ════════════════════════════════════════
+   CATEGORIES
+════════════════════════════════════════ */
+function buildCatPills() {
+  const scroll = document.getElementById('cats-scroll');
+  CATS.forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'cat-pill';
+    div.dataset.cat = c.slug;
+    div.innerHTML = `${c.icon} ${c.nom}`;
+    div.onclick = () => selectCat(div, c.slug);
+    scroll.appendChild(div);
+  });
+}
+
+function selectCat(el, cat) {
+  document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  currentCat = cat;
+  filterArtisans();
+}
+
+function populateCatSelect() {
+  const sel = document.getElementById('f-cat-select');
+  CATS.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.slug;
+    opt.textContent = c.icon + ' ' + c.nom;
+    sel.appendChild(opt);
+  });
+  // Option "écrire librement" en fin de liste
+  const autre = document.createElement('option');
+  autre.value = '__autre__';
+  autre.textContent = '✏️ Ajouter un métier';
+  sel.appendChild(autre);
+}
+
+function onCatChange() {
+  const sel = document.getElementById('f-cat-select');
+  const freeWrap = document.getElementById('cat-free-wrap');
+  const freeInput = document.getElementById('f-cat-free');
+  if (sel.value === '__autre__') {
+    freeWrap.style.display = 'block';
+    document.getElementById('f-cat').value = '';
+    setTimeout(() => freeInput.focus(), 150);
+  } else {
+    freeWrap.style.display = 'none';
+    freeInput.value = '';
+    document.getElementById('f-cat').value = sel.value;
+  }
+}
+
+function onZoneChange() {
+  const sel = document.getElementById('f-zone-select');
+  const freeWrap = document.getElementById('zone-free-wrap');
+  const freeInput = document.getElementById('f-zone-free');
+  if (sel.value === '__autre__') {
+    freeWrap.style.display = 'block';
+    document.getElementById('f-zone').value = '';
+    setTimeout(() => freeInput.focus(), 150);
+  } else {
+    freeWrap.style.display = 'none';
+    freeInput.value = '';
+    document.getElementById('f-zone').value = sel.value;
+  }
+}
+
+/* ════════════════════════════════════════
+   LOAD ARTISANS
+════════════════════════════════════════ */
+async function loadArtisans() {
+  if (!sb) return;
+  const { data, error } = await sb
+    .from('artisans')
+    .select('*')
+    .eq('statut', 'actif')
+    .order('created_at', { ascending: false });
+
+  if (error) { toast('Erreur de chargement'); return; }
+  allArtisans = data || [];
+  filterArtisans();
+}
+
+function filterArtisans() {
+  const q = document.getElementById('search-input').value.toLowerCase();
+  let list = allArtisans;
+  if (currentCat !== 'all') list = list.filter(a => a.categorie === currentCat);
+  if (q) list = list.filter(a =>
+    a.nom.toLowerCase().includes(q) ||
+    a.metier.toLowerCase().includes(q) ||
+    (a.zone||'').toLowerCase().includes(q)
+  );
+  renderArtisans(list);
+}
+
+function getCatInfo(slug) {
+  return CATS.find(c => c.slug === slug) || { icon:'🔧', nom: slug };
+}
+
+function renderArtisans(list) {
+  const el = document.getElementById('artisan-list');
+  document.getElementById('artisan-count').textContent = list.length ? `${list.length} trouvé(s)` : '';
+
+  if (!list.length) {
+    el.innerHTML = `<div class="empty-state">
+      <div class="empty-icon">🔍</div>
+      <h3>Aucun artisan trouvé</h3>
+      <p>Essayez une autre catégorie ou revenez plus tard.</p>
+    </div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(a => {
+    const cat = getCatInfo(a.categorie);
+    const dispo = a.disponible;
+    const stars = a.note_moy ? '★'.repeat(Math.round(a.note_moy)) : '★★★★★';
+    const note  = a.note_moy ? `${a.note_moy} (${a.nb_avis} avis)` : 'Nouveau';
+    const avatarHtml = a.photo_url
+      ? `<img src="${a.photo_url}" alt="${a.nom}" style="width:100%;height:100%;object-fit:cover;border-radius:14px">`
+      : cat.icon;
+    return `
+    <div class="artisan-card" onclick="openArtisan('${a.id}')">
+      <div class="art-avatar">${avatarHtml}</div>
+      <div class="art-info">
+        <div class="art-name">${a.nom}</div>
+        <div class="art-job">${a.metier}</div>
+        <div class="art-stars">${stars} <span style="color:var(--muted);font-size:11px">${note}</span></div>
+      </div>
+      <div class="art-right">
+        <span class="badge ${dispo ? 'badge-green' : 'badge-red'}">
+          ${dispo ? '● Disponible' : '● Occupé'}
+        </span>
+        <div class="art-dist">${a.zone}</div>
+        <div class="art-chevron">›</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ════════════════════════════════════════
+   DETAIL ARTISAN
+════════════════════════════════════════ */
+function openArtisan(id) {
+  currentArtisan = allArtisans.find(a => a.id === id);
+  if (!currentArtisan) return;
+  const a = currentArtisan;
+  const cat = getCatInfo(a.categorie);
+  const stars = a.note_moy ? '★'.repeat(Math.round(a.note_moy)) : '★★★★★';
+  const note  = a.note_moy ? `${a.note_moy} <span>(${a.nb_avis} avis)</span>` : '<span>Nouveau</span>';
+
+  const detAvatar = document.getElementById('det-avatar');
+  if (a.photo_url) {
+    detAvatar.innerHTML = `<img src="${a.photo_url}" alt="${a.nom}" style="width:100%;height:100%;object-fit:cover;border-radius:16px">`;
+  } else {
+    detAvatar.textContent = cat.icon;
+  }
+  document.getElementById('det-name').textContent = a.nom;
+  document.getElementById('det-job').textContent = a.metier;
+  document.getElementById('det-stars').innerHTML = `${stars} ${note}`;
+
+  document.getElementById('det-chips').innerHTML = `
+    <div class="chip">📍 ${a.zone}</div>
+    <div class="chip">📞 Appel direct</div>
+    <div class="chip ${a.disponible ? 'green-chip' : ''}">
+      ${a.disponible ? '● Disponible' : '● Occupé'}
+    </div>`;
+
+  document.getElementById('det-desc').textContent =
+    a.description || 'Artisan professionnel basé à Lomé. Contactez-le directement pour plus d\'informations.';
+
+  document.getElementById('det-zones').innerHTML =
+    `<div class="tag">📍 ${a.zone}</div><div class="tag">🏙️ Lomé</div>`;
+
+  document.getElementById('det-services').innerHTML =
+    `<div class="tag">${cat.icon} ${cat.nom}</div>`;
+
+  document.getElementById('det-call-btn').onclick = () => {
+    window.location.href = `tel:${a.telephone}`;
+  };
+  document.getElementById('det-wa-btn').onclick = () => {
+    const msg = encodeURIComponent(`Bonjour ${a.nom}, j'ai trouvé votre contact sur Artisan Express. J'aurais besoin de vos services.`);
+    window.open(`https://wa.me/${a.telephone.replace(/\s/g,'')}?text=${msg}`);
+  };
+
+  previousScreen = 'home';
+  showScreen('screen-detail');
+}
+
+/* ════════════════════════════════════════
+   PLAN SELECTION
+════════════════════════════════════════ */
+function selectPlan(el) {
+  document.querySelectorAll('.plan-opt').forEach(p => p.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedPlan = { plan: el.dataset.plan, price: parseInt(el.dataset.price) };
+}
+
+/* ════════════════════════════════════════
+   SIGNUP ARTISAN
+════════════════════════════════════════ */
+async function submitSignup() {
+  const nom  = document.getElementById('f-nom').value.trim();
+  const tel  = document.getElementById('f-tel').value.trim();
+  let cat = document.getElementById('f-cat').value.trim();
+  if (!cat) cat = (document.getElementById('f-cat-free').value || '').trim();
+  if (cat === '__autre__') cat = '';
+  const catRaw = cat;
+  const metier = document.getElementById('f-metier').value.trim();
+  let zone = document.getElementById('f-zone').value.trim();
+  if (!zone || zone === '__autre__') zone = (document.getElementById('f-zone-free').value || '').trim();
+  const desc = document.getElementById('f-desc').value.trim();
+  const ref  = document.getElementById('f-ref').value.trim();
+
+  if (!nom || !tel || !catRaw || !metier || !zone || !ref) {
+    toast('⚠️ Veuillez remplir tous les champs obligatoires');
+    return;
+  }
+
+  const btn = document.getElementById('signup-btn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Envoi en cours…';
+
+  // Calcul dates abonnement
+  const debut = new Date();
+  const fin   = new Date();
+  fin.setDate(fin.getDate() + PLANS[selectedPlan.plan].dur);
+
+  // Insérer artisan
+  // Upload photo si présente
+  let photo_url = null;
+  const photoFile = window._photoFile;
+  if (photoFile) {
+    const ext = photoFile.name.split('.').pop();
+    const fileName = `artisan_${Date.now()}.${ext}`;
+    const { data: upData, error: upErr } = await sb.storage
+      .from('photos')
+      .upload(fileName, photoFile, { cacheControl: '3600', upsert: false });
+    if (!upErr) {
+      const { data: urlData } = sb.storage.from('photos').getPublicUrl(fileName);
+      photo_url = urlData.publicUrl;
+    }
+  }
+
+  const { data: artData, error: artErr } = await sb.from('artisans').insert([{
+    nom, telephone: tel, metier, categorie: cat,
+    zone, description: desc, disponible: true,
+    statut: 'en_attente', photo_url
+  }]).select().single();
+
+  if (artErr) {
+    toast('❌ Erreur: ' + (artErr.message || 'Vérifiez vos informations'));
+    btn.disabled = false; btn.textContent = '✅ Soumettre ma candidature';
+    return;
+  }
+
+  // Insérer abonnement
+  await sb.from('abonnements').insert([{
+    artisan_id: artData.id,
+    plan: selectedPlan.plan,
+    montant: selectedPlan.price,
+    date_debut: debut.toISOString().split('T')[0],
+    date_fin: fin.toISOString().split('T')[0],
+    statut: 'en_attente',
+    reference_paiement: ref,
+    valide_par_admin: false
+  }]);
+
+  // Reset form
+  // Reset photo
+  window._photoFile = null;
+  document.getElementById('photo-preview').innerHTML = '<span id="photo-placeholder">🧑</span><div class="photo-overlay">📷</div>';
+  document.getElementById('photo-input').value = '';
+  document.getElementById('gallery-input').value = '';
+
+  ['f-nom','f-tel','f-metier','f-desc','f-ref'].forEach(id =>
+    document.getElementById(id).value = '');
+  document.getElementById('f-cat').value = '';
+  document.getElementById('f-cat-select').value = '';
+  document.getElementById('f-cat-free').value = '';
+  document.getElementById('cat-free-wrap').style.display = 'none';
+  document.getElementById('f-zone').value = '';
+  document.getElementById('f-zone-select').value = '';
+  document.getElementById('f-zone-free').value = '';
+  document.getElementById('zone-free-wrap').style.display = 'none';
+
+  btn.disabled = false; btn.textContent = '✅ Soumettre ma candidature';
+  toast('✅ Candidature envoyée ! Activation sous 24h.', 4000);
+  navigate('home', document.querySelectorAll('.nav-item')[0]);
+}
+
+/* ════════════════════════════════════════
+   ADMIN
+════════════════════════════════════════ */
+function openAdminModal() {
+  document.getElementById('admin-modal').classList.add('open');
+  document.getElementById('admin-pass-input').value = '';
+  setTimeout(() => document.getElementById('admin-pass-input').focus(), 300);
+}
+
+function checkAdmin() {
+  const cfg = loadConfig();
+  const pass = document.getElementById('admin-pass-input').value;
+  if (pass === cfg.pass) {
+    closeModal('admin-modal');
+    navigate('admin', document.querySelectorAll('.nav-item')[2]);
+  } else {
+    toast('❌ Mot de passe incorrect');
+  }
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+}
+
+function switchTab(btn, tabId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.remove('active');
+    p.style.display = 'none';
+  });
+  btn.classList.add('active');
+  const panel = document.getElementById(tabId);
+  panel.classList.add('active');
+  panel.style.display = 'block';
+}
+
+async function loadAdmin() {
+  if (!sb) return;
+
+  // Toutes inscriptions
+  const { data: all } = await sb.from('artisans').select('*').order('created_at', { ascending: false });
+  const artisans = all || [];
+
+  // Stats
+  const actifs   = artisans.filter(a => a.statut === 'actif').length;
+  const attente  = artisans.filter(a => a.statut === 'en_attente').length;
+  const total    = artisans.length;
+
+  // Revenus (abonnements validés)
+  const { data: abos } = await sb.from('abonnements')
+    .select('montant').eq('valide_par_admin', true);
+  const revenus = (abos || []).reduce((s, a) => s + (a.montant || 0), 0);
+
+  document.getElementById('stat-actifs').textContent = actifs;
+  document.getElementById('stat-attente').textContent = attente;
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-revenus').textContent =
+    revenus.toLocaleString('fr-FR') + ' F';
+
+  // En attente
+  const pending = artisans.filter(a => a.statut === 'en_attente');
+  const pList = document.getElementById('pending-list');
+
+  if (!pending.length) {
+    pList.innerHTML = `<div class="empty-state">
+      <div class="empty-icon">✅</div>
+      <h3>Aucune demande en attente</h3>
+      <p>Toutes les inscriptions ont été traitées.</p>
+    </div>`;
+  } else {
+    // Charger les abonnements de ces artisans
+    const ids = pending.map(a => a.id);
+    const { data: abosP } = await sb.from('abonnements')
+      .select('*').in('artisan_id', ids).eq('statut','en_attente');
+    const aboMap = {};
+    (abosP || []).forEach(ab => aboMap[ab.artisan_id] = ab);
+
+    // Sauvegarder dans cache global
+    _pendingCache = pending;
+    _aboCache = aboMap;
+
+    const cat = (slug) => getCatInfo(slug);
+    pList.innerHTML = pending.map(a => {
+      const abo = aboMap[a.id];
+      return `
+      <div class="pending-card" onclick="openProfilModal('${a.id}')" style="cursor:pointer">
+        <div class="pending-top">
+          <div class="pending-avatar">${a.photo_url ? `<img src="${a.photo_url}" alt="${a.nom}" style="width:100%;height:100%;object-fit:cover;border-radius:12px">` : cat(a.categorie).icon}</div>
+          <div style="flex:1;min-width:0">
+            <div class="pending-name">${a.nom}</div>
+            <div class="pending-meta">${a.metier} · ${a.zone}</div>
+            <div class="pending-meta">📞 ${a.telephone}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+            ${abo ? `<span class="badge badge-amber">${abo.plan}</span>` : ''}
+            <span style="font-size:18px;color:var(--muted)">›</span>
+          </div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px;font-style:italic">
+          Cliquez pour voir le profil complet avant de valider
+        </p>
+      </div>`;
+    }).join('');
+  }
+
+  // Liste artisans actifs
+  const actList = artisans.filter(a => a.statut === 'actif');
+  const aEl = document.getElementById('admin-art-list');
+  if (!actList.length) {
+    aEl.innerHTML = `<div class="empty-state">
+      <div class="empty-icon">🔧</div><h3>Aucun artisan actif</h3></div>`;
+  } else {
+    aEl.innerHTML = actList.map(a => {
+      const cat = getCatInfo(a.categorie);
+      return `
+      <div class="admin-art-card">
+        <div class="pending-avatar">${a.photo_url ? `<img src="${a.photo_url}" alt="${a.nom}" style="width:100%;height:100%;object-fit:cover;border-radius:12px">` : cat.icon}</div>
+        <div class="admin-art-info">
+          <div class="admin-art-name">${a.nom}</div>
+          <div class="admin-art-meta">${a.metier} · ${a.zone}</div>
+          <div class="admin-art-meta">📞 ${a.telephone}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end">
+          <div onclick="toggleDispo('${a.id}',${a.disponible})"
+               class="toggle-btn ${a.disponible ? 'on' : ''}">
+            <div class="toggle-knob"></div>
+          </div>
+          <button class="btn-delete-art" onclick="deleteArtisan('${a.id}','${a.nom}')">
+            🗑️
+          </button>
+        </div>
+      </div>`;
+    }).join('');
+  }
+}
+
+// Cache globale des artisans en attente et leurs abos
+let _pendingCache = [];
+let _aboCache = {};
+
+function openProfilModal(artId) {
+  const a = _pendingCache.find(x => x.id === artId);
+  if (!a) return;
+  const abo = _aboCache[artId];
+  const cat = getCatInfo(a.categorie);
+
+  // Avatar
+  const avatarEl = document.getElementById('pm-avatar');
+  if (a.photo_url) {
+    avatarEl.innerHTML = `<img src="${a.photo_url}" alt="${a.nom}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`;
+  } else {
+    avatarEl.textContent = cat.icon;
+  }
+
+  // Infos
+  document.getElementById('pm-nom').textContent = a.nom;
+  document.getElementById('pm-metier').textContent = a.metier;
+  document.getElementById('pm-tel').textContent = a.telephone;
+  document.getElementById('pm-zone').textContent = a.zone || '—';
+  document.getElementById('pm-cat').textContent = cat.icon + ' ' + cat.nom;
+
+  const desc = a.description || '';
+  const descWrap = document.getElementById('pm-desc-wrap');
+  if (desc) {
+    document.getElementById('pm-desc').textContent = desc;
+    descWrap.style.display = 'flex';
+  } else {
+    descWrap.style.display = 'none';
+  }
+
+  document.getElementById('pm-abo').textContent = abo
+    ? `${abo.plan} · ${abo.montant?.toLocaleString('fr-FR')} FCFA`
+    : '—';
+  document.getElementById('pm-ref').textContent = abo?.reference_paiement || '—';
+
+  const date = new Date(a.created_at);
+  document.getElementById('pm-date').textContent =
+    date.toLocaleDateString('fr-FR', { day:'2-digit', month:'long', year:'numeric' });
+
+  // Badge statut
+  document.getElementById('pm-statut-badge').innerHTML =
+    `<span class="badge badge-amber">⏳ En attente de validation</span>`;
+
+  // Boutons
+  document.getElementById('pm-actions').innerHTML = `
+    <button class="btn-approve" style="flex:1" onclick="approveArtisan('${a.id}','${abo?.id||''}');closeModal('profil-modal')">
+      ✓ Valider
+    </button>
+    <button class="btn-reject" style="flex:1" onclick="rejectArtisan('${a.id}','${abo?.id||''}');closeModal('profil-modal')">
+      ✗ Refuser
+    </button>`;
+
+  document.getElementById('profil-modal').classList.add('open');
+}
+
+async function approveArtisan(artId, aboId) {
+  if (!confirm('Valider cet artisan ?')) return;
+  await sb.from('artisans').update({ statut: 'actif' }).eq('id', artId);
+  if (aboId) await sb.from('abonnements')
+    .update({ statut:'actif', valide_par_admin:true }).eq('id', aboId);
+  toast('✅ Artisan validé et activé !');
+  loadAdmin();
+}
+
+async function rejectArtisan(artId, aboId) {
+  if (!confirm('Refuser et supprimer cette demande ?')) return;
+  if (aboId) await sb.from('abonnements').delete().eq('id', aboId);
+  await sb.from('artisans').delete().eq('id', artId);
+  toast('🗑️ Demande supprimée');
+  loadAdmin();
+}
+
+async function toggleDispo(id, current) {
+  await sb.from('artisans').update({ disponible: !current }).eq('id', id);
+  toast(current ? '⏸️ Marqué Occupé' : '✅ Marqué Disponible');
+  loadAdmin();
+}
+
+async function deleteArtisan(id, nom) {
+  if (!confirm(`Supprimer définitivement ${nom} de l'application ?\nCette action est irréversible.`)) return;
+  // Supprimer abonnements liés
+  await sb.from('abonnements').delete().eq('artisan_id', id);
+  // Supprimer artisan
+  const { error } = await sb.from('artisans').delete().eq('id', id);
+  if (error) { toast('❌ Erreur lors de la suppression'); return; }
+  toast(`🗑️ ${nom} supprimé avec succès`);
+  loadAdmin();
+}
+
+function changePassword() {
+  const actuel  = document.getElementById('pass-actuel').value;
+  const nouveau = document.getElementById('pass-nouveau').value;
+  const confirm = document.getElementById('pass-confirm').value;
+
+  if (!actuel || !nouveau || !confirm) {
+    toast('⚠️ Remplissez tous les champs'); return;
+  }
+  if (actuel !== CONFIG.pass) {
+    toast('❌ Mot de passe actuel incorrect'); return;
+  }
+  if (nouveau.length < 6) {
+    toast('⚠️ Le nouveau mot de passe doit faire au moins 6 caractères'); return;
+  }
+  if (nouveau !== confirm) {
+    toast('❌ Les deux nouveaux mots de passe ne correspondent pas'); return;
+  }
+
+  // Mettre à jour en mémoire
+  CONFIG.pass = nouveau;
+  // Sauvegarder dans localStorage pour persistance
+  localStorage.setItem('ae_pass_override', nouveau);
+
+  document.getElementById('pass-actuel').value = '';
+  document.getElementById('pass-nouveau').value = '';
+  document.getElementById('pass-confirm').value = '';
+
+  toast('✅ Mot de passe changé avec succès !', 4000);
+}
+
+/* ════════════════════════════════════════
+   SQL SETUP MODAL (first run)
+════════════════════════════════════════ */
+function showSQLModal() {
+  const sql = `
+-- Exécutez ce SQL dans Supabase Studio > SQL Editor
+
+create table if not exists artisans (
+  id          uuid default gen_random_uuid() primary key,
+  nom         text not null,
+  telephone   text not null,
+  metier      text not null,
+  categorie   text not null,
+  zone        text not null,
+  description text,
+  disponible  boolean default true,
+  statut      text default 'en_attente',
+  note_moy    numeric(2,1) default 0,
+  nb_avis     int default 0,
+  created_at  timestamptz default now()
+);
+
+create table if not exists abonnements (
+  id                 uuid default gen_random_uuid() primary key,
+  artisan_id         uuid references artisans(id) on delete cascade,
+  plan               text not null,
+  montant            int not null,
+  date_debut         date not null,
+  date_fin           date not null,
+  statut             text default 'en_attente',
+  reference_paiement text,
+  valide_par_admin   boolean default false,
+  created_at         timestamptz default now()
+);
+
+-- Activer Row Level Security (lecture publique des artisans actifs)
+alter table artisans enable row level security;
+alter table abonnements enable row level security;
+
+create policy "Lecture publique artisans actifs"
+  on artisans for select using (statut = 'actif');
+
+create policy "Insertion libre artisans"
+  on artisans for insert with check (true);
+
+create policy "Mise à jour libre artisans"
+  on artisans for update using (true);
+
+create policy "Suppression libre artisans"
+  on artisans for delete using (true);
+
+create policy "Insertion abonnements"
+  on abonnements for insert with check (true);
+
+create policy "Lecture abonnements"
+  on abonnements for select using (true);
+
+create policy "MAJ abonnements"
+  on abonnements for update using (true);
+
+create policy "Suppression abonnements"
+  on abonnements for delete using (true);
+  `.trim();
+
+  const win = window.open('', '_blank');
+  if (win) {
+    win.document.write(`<pre style="font-family:monospace;padding:20px;background:#1a1a2e;color:#e8eaf6;font-size:13px">${sql}</pre>`);
+  } else {
+    alert('Copiez et exécutez ce SQL dans Supabase Studio:\n\n' + sql);
+  }
+}
+
+/* ════════════════════════════════════════
+   PHOTO PROFIL
+════════════════════════════════════════ */
+function triggerGallery() {
+  document.getElementById('gallery-input').click();
+}
+
+function previewPhoto(input) {
+  const file = input.files[0];
+  if (!file) return;
+  window._photoFile = file;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const preview = document.getElementById('photo-preview');
+    preview.innerHTML = `<img src="${e.target.result}" alt="Photo profil"><div class="photo-overlay">📷 Changer</div>`;
+  };
+  reader.readAsDataURL(file);
+  // Synchroniser les deux inputs
+  const otherId = input.id === 'photo-input' ? 'gallery-input' : 'photo-input';
+  document.getElementById(otherId).value = '';
+}
+
+/* ════════════════════════════════════════
+   BOOT
+════════════════════════════════════════ */
+window.addEventListener('load', () => {
+  setTimeout(initApp, 800);
+  registerSW();
+});
+
+/* ════════════════════════════════════════
+   SERVICE WORKER — MISE À JOUR AUTO
+════════════════════════════════════════ */
+function registerSW() {
+  if (!('serviceWorker' in navigator)) return;
+
+  // VERSION — changer à chaque mise à jour : v1.0, v1.1, v1.2...
+  const VERSION = 'v1.0';
+
+  // SW inline dans un Blob — un seul fichier HTML suffit !
+  const swCode = `
+const VERSION = '${VERSION}';
+const CACHE = 'artisan-express-' + VERSION;
+const FILES = ['/', '/index.html'];
+
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', e => {
+  e.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+    )
+  );
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    fetch(e.request).then(res => {
+      const clone = res.clone();
+      caches.open(CACHE).then(c => c.put(e.request, clone));
+      return res;
+    }).catch(() => caches.match(e.request))
+  );
+});
+
+self.addEventListener('message', e => {
+  if (e.data && e.data.type === 'SKIP_WAITING') self.skipWaiting();
+});
+  `;
+
+  const blob = new Blob([swCode], { type: 'application/javascript' });
+  const swUrl = URL.createObjectURL(blob);
+
+  navigator.serviceWorker.register(swUrl).then(reg => {
+
+    setInterval(() => reg.update(), 60000);
+
+    reg.addEventListener('updatefound', () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          showUpdateBanner();
+        }
+      });
+    });
+
+  }).catch(() => {});
+
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    window.location.reload();
+  });
+}
+
+function showUpdateBanner() {
+  const banner = document.createElement('div');
+  banner.id = 'update-banner';
+  banner.innerHTML = `
+    <div style="
+      position:fixed;top:0;left:0;right:0;z-index:9999;
+      background:var(--amber);color:var(--night);
+      padding:12px 16px;
+      display:flex;align-items:center;justify-content:space-between;
+      font-family:'Syne',sans-serif;font-weight:700;font-size:13px;
+      box-shadow:0 4px 20px rgba(0,0,0,.4);
+    ">
+      <span>⚡ Mise à jour disponible !</span>
+      <button onclick="applyUpdate()" style="
+        background:var(--night);color:var(--amber);
+        border:none;border-radius:8px;padding:6px 14px;
+        font-family:'Syne',sans-serif;font-weight:700;font-size:12px;
+        cursor:pointer;
+      ">Mettre à jour</button>
+    </div>
+  `;
+  document.body.appendChild(banner);
+}
+
+function applyUpdate() {
+  navigator.serviceWorker.ready.then(reg => {
+    if (reg.waiting) {
+      reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+    }
+  });
+}
+
+// Fermer modal en cliquant dehors
+document.getElementById('admin-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal('admin-modal');
+});
+</script>
+</body>
+</html>
